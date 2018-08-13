@@ -1,0 +1,129 @@
+E\+S\+P8266 Arduino core환경 개발~\newline
+이 프로젝트 자세한 내용 정리를 위한 개발 문서입니다 \begin{DoxyAuthor}{작성자}
+Goodbro(\+C\+T\+O) 이우섭 
+\end{DoxyAuthor}
+\begin{DoxyDate}{날짜}
+2018.\+08.\+06
+\end{DoxyDate}
+\begin{DoxyItemize}
+\item Wifi Module $>$ Wall Pad \tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ F\+CU  }&\textbf{ E\+RV   }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ F\+CU  }&\textbf{ E\+RV   }\\\cline{1-2}
+\endhead
+Header~\newline
+ init \+: 0x\+F5~\newline
+ 상태응답 \+: 0x\+D5~\newline
+ 제어응답 \+: 0\+X\+C5  &Header~\newline
+ 상태응답 \+: 0x\+D7~\newline
+ 제어응답 \+: 0\+X\+C7   \\\cline{1-2}
+Wifi감도~\newline
+ 중단($<$-\/85) \+: 0x01~\newline
+ 연결1($<$-\/75) \+: 0x02~\newline
+ 연결2($>$ -\/75) \+: 0x03  &Wifi감도~\newline
+ F\+C\+U와 동일   \\\cline{1-2}
+Mode \& Fan 속도~\newline
+ M\+SB \mbox{[}냉방 \+: 0x00\mbox{]} \mbox{[}난방 \+: 0x10\mbox{]} \mbox{[}송풍 \+: 0x20\mbox{]} +\+Fan 자동 \+: 0x80~\newline
+ L\+SB \mbox{[}Off \+: 0x00\mbox{]} \mbox{[}Low \+: 0x01\mbox{]} \mbox{[}Mid \+: 0x02\mbox{]} \mbox{[}High \+: 0x03\mbox{]}  &Mode~\newline
+ Vent \+: 0x00~\newline
+ Eco \+: 0x01~\newline
+ Timer \+: 0x02~\newline
+ By\+Pass \+: 0x03   \\\cline{1-2}
+F\+L\+AG~\newline
+ 7bit \+: Remote lock~\newline
+ 6bit \+: Mode event~\newline
+ 3bit \+: Timer 비/가동~\newline
+ 1bit\+: 화씨/섭씨~\newline
+ 0bit \+: 가동신호  &Fan 속도~\newline
+ Off \+: 0x00~\newline
+ Low \+: 0x01~\newline
+ Mid \+: 0x02~\newline
+ High \+: 0x03   \\\cline{1-2}
+온도세팅@ 7bit \+: .5도~\newline
+ 0$\sim$6bit \+: 0$\sim$127도  &F\+L\+AG~\newline
+ 7bit \+: Remote lock~\newline
+ 6bit \+: Mode event~\newline
+ 3bit \+: Timer 비/가동~\newline
+ 2bit \+: Heater off/on~\newline
+ 1bit \+: 화씨/섭씨~\newline
+ 0bit \+: 가동신호   \\\cline{1-2}
+Wifi Status~\newline
+ AP \& 중단 \+: 0x00~\newline
+ Wifi \& 중단 \+: 0x10~\newline
+ Wifi \& 연결 \+: 0x11  &Wifi Status~\newline
+ F\+C\+U와 동일   \\\cline{1-2}
+E\+C\+O\+DE~\newline
+ 내부통신에러 \+: 0x01  &E\+C\+O\+DE~\newline
+ F\+C\+U와 동일   \\\cline{1-2}
+Check\+Sum  &Check\+Sum   \\\cline{1-2}
+\end{longtabu}
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item Wifi Module $<$ Wall Pad \tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ F\+CU  }&\textbf{ E\+RV   }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ F\+CU  }&\textbf{ E\+RV   }\\\cline{1-2}
+\endhead
+Header~\newline
+ init \+: 0x\+E5~\newline
+ 상태응답 \+: 0x\+B5~\newline
+ 제어응답 \+: 0\+X\+A5  &Header~\newline
+ 상태응답 \+: 0x\+B7~\newline
+ 제어응답 \+: 0\+X\+A7   \\\cline{1-2}
+현재온도 (소수점)  &현재온도 (소수점)   \\\cline{1-2}
+Mode \& Fan 속도~\newline
+ M\+SB \mbox{[}냉방 \+: 0x00\mbox{]} \mbox{[}난방 \+: 0x10\mbox{]} \mbox{[}송풍 \+: 0x20\mbox{]} +\+Fan 자동 \+: 0x80~\newline
+ L\+SB \mbox{[}Off \+: 0x00\mbox{]} \mbox{[}Low \+: 0x01\mbox{]} \mbox{[}Mid \+: 0x02\mbox{]} \mbox{[}High \+: 0x03\mbox{]}  &Mode~\newline
+ Vent \+: 0x00~\newline
+ Eco \+: 0x01~\newline
+ Timer \+: 0x02~\newline
+ By\+Pass \+: 0x03   \\\cline{1-2}
+F\+L\+AG~\newline
+ 7bit \+: Remote lock~\newline
+ 6bit \+: 팬 가동상태~\newline
+ 5bit \+: 실내온도 센서(R\+C센서/리턴제어)~\newline
+ 4bit \+: Pipe 개수(2/4)~\newline
+ 3bit \+: 현재온도(양수/음수)~\newline
+ 2bit \+: 동파방지 비/가동~\newline
+ 1bit\+: 화씨/섭씨~\newline
+ 0bit \+: 가동신호  &Fan 속도~\newline
+ Off \+: 0x00~\newline
+ Low \+: 0x01~\newline
+ Mid \+: 0x02~\newline
+ High \+: 0x03   \\\cline{1-2}
+온도세팅@ 7bit \+: .5도~\newline
+ 0$\sim$6bit \+: 0$\sim$127도  &F\+L\+AG~\newline
+ 7bit \+: Remote lock~\newline
+ 6bit \+: Mode event~\newline
+ 4bit \+: Filter교체알람~\newline
+ 3bit \+: 현재온도(양수/음수)~\newline
+ 2bit \+: Heater off/on~\newline
+ 1bit \+: 화씨/섭씨~\newline
+ 0bit \+: 가동신호   \\\cline{1-2}
+현재온도 (정수)  &현재온도 (정수)   \\\cline{1-2}
+E\+C\+O\+DE~\newline
+ 내부통신에러 \+: 0x01~\newline
+ R/\+C온도센서에러 \+: 0x02~\newline
+ 동파방지센서에러 \+: 0x04~\newline
+ Pipe1온도센서에러 \+: 0x08~\newline
+ Air센서에러 \+: 0x10~\newline
+ 수위센서에러 \+: 0x20~\newline
+ Pipe2온도센서에러 \+:0x40~\newline
+ Fan(\+B\+L\+D\+C)에러 \+: 0x80  &E\+C\+O\+DE~\newline
+ 내부통신에러 \+: 0x01~\newline
+ 실내온도에러 \+: 0x08~\newline
+ 외기온도에러 \+: 0x10~\newline
+ Fan(\+B\+L\+D\+C)에러 \+: 0x80   \\\cline{1-2}
+Check\+Sum  &Check\+Sum   \\\cline{1-2}
+\end{longtabu}
+\end{DoxyItemize}

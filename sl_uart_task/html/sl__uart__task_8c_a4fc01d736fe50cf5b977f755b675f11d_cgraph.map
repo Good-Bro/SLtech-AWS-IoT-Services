@@ -1,0 +1,13 @@
+<map id="setup" name="setup">
+<area shape="rect" id="node2" href="$sl__uart__task_8c.html#ac4dd7f628ac36ff312d47a898d0573d6" title="EEPROM 체크 함수 " alt="" coords="147,81,251,108"/>
+<area shape="rect" id="node6" href="$sl__uart__task_8c.html#a35bd387bc89edc5110da50f77d737813" title="UART_RX_TASK_Handler함수 (트랩) " alt="" coords="114,208,285,235"/>
+<area shape="rect" id="node12" href="$sl__uart__task_8c.html#a93049dd8aee54bb4e745e526542c36f7" title="task 메세지를 보내는 함수 " alt="" coords="108,259,291,285"/>
+<area shape="rect" id="node3" href="$sl__uart__task_8c.html#a707a658761cc8b67188a0eb67ba9103e" title="EEPROM 읽기 함수 " alt="" coords="341,5,436,32"/>
+<area shape="rect" id="node4" href="$sl__uart__task_8c.html#aed00320e0a0898df9eed984a3ced0ad8" title="EEPROM 초기화 함수 " alt="" coords="347,56,431,83"/>
+<area shape="rect" id="node5" href="$sl__uart__task_8c.html#a77d6a883c5cf0c92dcc225685249e38e" title="EEPROM 쓰기 함수 " alt="" coords="339,107,438,133"/>
+<area shape="rect" id="node7" href="$sl__uart__task_8c.html#a38f7f9361dece3c36092a307f845f0a6" title="오류 확인 함수 " alt="" coords="347,157,430,184"/>
+<area shape="rect" id="node8" href="$sl__uart__task_8c.html#a20ce1fcbc3f39da9ceaf09dbd5ca5ef8" title="응답 데이터 형식지정 함수 " alt="" coords="339,208,439,235"/>
+<area shape="rect" id="node9" href="$sl__uart__task_8c.html#af273a6e233df1fa0ded638e07843b468" title="awsWSclient" alt="" coords="339,259,438,285"/>
+<area shape="rect" id="node10" href="$sl__uart__task_8c.html#a8a2d61a985df99709d3d8c5ef7d46605" title="publishing 함수 " alt="" coords="339,309,439,336"/>
+<area shape="rect" id="node11" href="$sl__uart__task_8c.html#aed38f3e7ee0565ea6703f91a12983f54" title="client" alt="" coords="487,309,540,336"/>
+</map>

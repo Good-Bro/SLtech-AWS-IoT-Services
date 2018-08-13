@@ -1,0 +1,4 @@
+<map id="sendAwsMsg" name="sendAwsMsg">
+<area shape="rect" id="node2" href="$sl__uart__task_8c.html#a35bd387bc89edc5110da50f77d737813" title="UART_RX_TASK_Handler함수 (트랩) " alt="" coords="153,5,324,32"/>
+<area shape="rect" id="node3" href="$sl__uart__task_8c.html#a4fc01d736fe50cf5b977f755b675f11d" title="task 설정 함수 " alt="" coords="372,5,427,32"/>
+</map>

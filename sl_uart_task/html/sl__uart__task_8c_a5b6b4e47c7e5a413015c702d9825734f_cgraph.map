@@ -1,0 +1,9 @@
+<map id="Connect" name="Connect">
+<area shape="rect" id="node2" href="$sl__uart__task_8c.html#a77d6a883c5cf0c92dcc225685249e38e" title="EEPROM 쓰기 함수 " alt="" coords="124,5,223,32"/>
+<area shape="rect" id="node3" href="$sl__uart__task_8c.html#af273a6e233df1fa0ded638e07843b468" title="awsWSclient" alt="" coords="124,56,223,83"/>
+<area shape="rect" id="node4" href="$sl__uart__task_8c.html#aa0a57e883c6c9fc19e62a609d967be9c" title="websocket &amp; MQTT 접속 함수 " alt="" coords="139,107,207,133"/>
+<area shape="rect" id="node7" href="$sl__uart__task_8c.html#a0bccd94c4239c019c480e507cb6159ee" title="MQTT subscribe 함수 " alt="" coords="134,157,213,184"/>
+<area shape="rect" id="node5" href="$sl__uart__task_8c.html#aed38f3e7ee0565ea6703f91a12983f54" title="client" alt="" coords="303,132,356,159"/>
+<area shape="rect" id="node6" href="$sl__uart__task_8c.html#a0db6cddb7699ddbce4aa6f489d7d7879" title="클라이언트 ID 자동생성 함수 " alt="" coords="271,81,388,108"/>
+<area shape="rect" id="node8" href="$sl__uart__task_8c.html#ac3a129f66dc859e2b7279565f4e1de78" title="callback 함수 " alt="" coords="294,183,365,209"/>
+</map>

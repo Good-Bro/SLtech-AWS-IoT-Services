@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SLTECH &amp; SimpleHAN: CANADA향 LCD형 ESP-12E 모듈 개발</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SLTECH &amp; SimpleHAN
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('index.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">CANADA향 LCD형 ESP-12E 모듈 개발 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>ESP8266 Arduino core환경 개발<br />
+이 프로젝트 자세한 내용 정리를 위한 개발 문서입니다 </p><dl class="section author"><dt>작성자</dt><dd>Goodbro(CTO) 이우섭 </dd></dl>
+<dl class="section date"><dt>날짜</dt><dd>2018.08.06</dd></dl>
+<ul>
+<li>Wifi Module &gt; Wall Pad <table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">FCU  </th><th class="markdownTableHeadNone">ERV   </th></tr>
+<tr class="markdownTableBody" class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Header<br />
+ init : 0xF5<br />
+ 상태응답 : 0xD5<br />
+ 제어응답 : 0XC5  </td><td class="markdownTableBodyNone">Header<br />
+ 상태응답 : 0xD7<br />
+ 제어응답 : 0XC7   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Wifi감도<br />
+ 중단(&lt;-85) : 0x01<br />
+ 연결1(&lt;-75) : 0x02<br />
+ 연결2(&gt; -75) : 0x03  </td><td class="markdownTableBodyNone">Wifi감도<br />
+ FCU와 동일   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Mode &amp; Fan 속도<br />
+ MSB [냉방 : 0x00] [난방 : 0x10] [송풍 : 0x20] +Fan 자동 : 0x80<br />
+ LSB [Off : 0x00] [Low : 0x01] [Mid : 0x02] [High : 0x03]  </td><td class="markdownTableBodyNone">Mode<br />
+ Vent : 0x00<br />
+ Eco : 0x01<br />
+ Timer : 0x02<br />
+ ByPass : 0x03   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowEven">
+<td class="markdownTableBodyNone">FLAG<br />
+ 7bit : Remote lock<br />
+ 6bit : Mode event<br />
+ 3bit : Timer 비/가동<br />
+ 1bit: 화씨/섭씨<br />
+ 0bit : 가동신호  </td><td class="markdownTableBodyNone">Fan 속도<br />
+ Off : 0x00<br />
+ Low : 0x01<br />
+ Mid : 0x02<br />
+ High : 0x03   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">온도세팅@ 7bit : .5도<br />
+ 0~6bit : 0~127도  </td><td class="markdownTableBodyNone">FLAG<br />
+ 7bit : Remote lock<br />
+ 6bit : Mode event<br />
+ 3bit : Timer 비/가동<br />
+ 2bit : Heater off/on<br />
+ 1bit : 화씨/섭씨<br />
+ 0bit : 가동신호   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Wifi Status<br />
+ AP &amp; 중단 : 0x00<br />
+ Wifi &amp; 중단 : 0x10<br />
+ Wifi &amp; 연결 : 0x11  </td><td class="markdownTableBodyNone">Wifi Status<br />
+ FCU와 동일   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">ECODE<br />
+ 내부통신에러 : 0x01  </td><td class="markdownTableBodyNone">ECODE<br />
+ FCU와 동일   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowEven">
+<td class="markdownTableBodyNone">CheckSum  </td><td class="markdownTableBodyNone">CheckSum   </td></tr>
+</table>
+</li>
+</ul>
+<ul>
+<li>Wifi Module &lt; Wall Pad <table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">FCU  </th><th class="markdownTableHeadNone">ERV   </th></tr>
+<tr class="markdownTableBody" class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Header<br />
+ init : 0xE5<br />
+ 상태응답 : 0xB5<br />
+ 제어응답 : 0XA5  </td><td class="markdownTableBodyNone">Header<br />
+ 상태응답 : 0xB7<br />
+ 제어응답 : 0XA7   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowEven">
+<td class="markdownTableBodyNone">현재온도 (소수점)  </td><td class="markdownTableBodyNone">현재온도 (소수점)   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Mode &amp; Fan 속도<br />
+ MSB [냉방 : 0x00] [난방 : 0x10] [송풍 : 0x20] +Fan 자동 : 0x80<br />
+ LSB [Off : 0x00] [Low : 0x01] [Mid : 0x02] [High : 0x03]  </td><td class="markdownTableBodyNone">Mode<br />
+ Vent : 0x00<br />
+ Eco : 0x01<br />
+ Timer : 0x02<br />
+ ByPass : 0x03   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowEven">
+<td class="markdownTableBodyNone">FLAG<br />
+ 7bit : Remote lock<br />
+ 6bit : 팬 가동상태<br />
+ 5bit : 실내온도 센서(RC센서/리턴제어)<br />
+ 4bit : Pipe 개수(2/4)<br />
+ 3bit : 현재온도(양수/음수)<br />
+ 2bit : 동파방지 비/가동<br />
+ 1bit: 화씨/섭씨<br />
+ 0bit : 가동신호  </td><td class="markdownTableBodyNone">Fan 속도<br />
+ Off : 0x00<br />
+ Low : 0x01<br />
+ Mid : 0x02<br />
+ High : 0x03   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">온도세팅@ 7bit : .5도<br />
+ 0~6bit : 0~127도  </td><td class="markdownTableBodyNone">FLAG<br />
+ 7bit : Remote lock<br />
+ 6bit : Mode event<br />
+ 4bit : Filter교체알람<br />
+ 3bit : 현재온도(양수/음수)<br />
+ 2bit : Heater off/on<br />
+ 1bit : 화씨/섭씨<br />
+ 0bit : 가동신호   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowEven">
+<td class="markdownTableBodyNone">현재온도 (정수)  </td><td class="markdownTableBodyNone">현재온도 (정수)   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">ECODE<br />
+ 내부통신에러 : 0x01<br />
+ R/C온도센서에러 : 0x02<br />
+ 동파방지센서에러 : 0x04<br />
+ Pipe1온도센서에러 : 0x08<br />
+ Air센서에러 : 0x10<br />
+ 수위센서에러 : 0x20<br />
+ Pipe2온도센서에러 :0x40<br />
+ Fan(BLDC)에러 : 0x80  </td><td class="markdownTableBodyNone">ECODE<br />
+ 내부통신에러 : 0x01<br />
+ 실내온도에러 : 0x08<br />
+ 외기온도에러 : 0x10<br />
+ Fan(BLDC)에러 : 0x80   </td></tr>
+<tr class="markdownTableBody" class="markdownTableRowEven">
+<td class="markdownTableBodyNone">CheckSum  </td><td class="markdownTableBodyNone">CheckSum   </td></tr>
+</table>
+</li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

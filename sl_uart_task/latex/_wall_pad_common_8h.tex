@@ -1,0 +1,194 @@
+\hypertarget{_wall_pad_common_8h}{}\section{Wall\+Pad\+Common.\+h 파일 참조}
+\label{_wall_pad_common_8h}\index{Wall\+Pad\+Common.\+h@{Wall\+Pad\+Common.\+h}}
+이 그래프는 이 파일을 직/간접적으로 include 하는 파일들을 보여줍니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{_wall_pad_common_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{데이터 구조}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_st_wall_pad}{St\+Wall\+Pad}}
+\begin{DoxyCompactList}\small\item\em Wall\+Pad의 접속 ssid 와 pw, mode state를 기록하는 구조체 \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_st_ap_list}{St\+Ap\+List}}
+\begin{DoxyCompactList}\small\item\em 주변 검색된 A\+P리스트의 정보를 담는 구조체 (암호화 여부와 수신세기를 포함) \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_st_last_send}{St\+Last\+Send}}
+\begin{DoxyCompactList}\small\item\em 업로드가 너무 자주일어나 과금에 영향을 주므로,~\newline
+마지막 업로드의 checksum 과 온도정보를 저장하여, aws 에 업로드 주기를 조절하는 구조체 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_wall_pad_common_8h_aa1bfef2ce53d431c709ee094aa02ccb6}{n\+M\+A\+X\+\_\+\+N\+A\+ME}}~40
+\item 
+\#define \mbox{\hyperlink{_wall_pad_common_8h_a633363122e0b4c2005649a1664a2335a}{n\+M\+A\+X\+\_\+\+I\+N\+I\+T\+\_\+\+C\+HK}}~40
+\item 
+\#define \mbox{\hyperlink{_wall_pad_common_8h_ac370fa01d5773341bbcc501c01c11d1e}{n\+M\+A\+X\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+AP}}~30
+\end{DoxyCompactItemize}
+\subsection*{타입정의}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{_wall_pad_common_8h_a01baed20aab6218b9846cc7c935f8de9}{typedef\+M\+O\+DE}} \mbox{\hyperlink{_wall_pad_common_8h_a066235770a533eb740dc3fd2494d64da}{e\+M\+O\+DE}}
+\item 
+typedef struct \mbox{\hyperlink{struct_st_wall_pad}{St\+Wall\+Pad}} \mbox{\hyperlink{_wall_pad_common_8h_afc78910c4749fa1230e1149115f9d70a}{Wall\+Pad}}
+\begin{DoxyCompactList}\small\item\em Wall\+Pad의 접속 ssid 와 pw, mode state를 기록하는 구조체 \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{struct_st_wall_pad}{St\+Wall\+Pad}} $\ast$ \mbox{\hyperlink{_wall_pad_common_8h_aadb492147a743663071ec68a774dbb1b}{p\+Wall\+Pad}}
+\item 
+typedef struct \mbox{\hyperlink{struct_st_ap_list}{St\+Ap\+List}} \mbox{\hyperlink{_wall_pad_common_8h_aa98442922a779292a101450d76255385}{Ap\+List}}
+\begin{DoxyCompactList}\small\item\em 주변 검색된 A\+P리스트의 정보를 담는 구조체 (암호화 여부와 수신세기를 포함) \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{struct_st_ap_list}{St\+Ap\+List}} $\ast$ \mbox{\hyperlink{_wall_pad_common_8h_ad2d28182118d0dc42728639623d2dc40}{p\+Ap\+List}}
+\item 
+typedef struct \mbox{\hyperlink{struct_st_last_send}{St\+Last\+Send}} \mbox{\hyperlink{_wall_pad_common_8h_a78ff28de5f4a28ca30a16c6e0f7b0d35}{Last\+Send}}
+\begin{DoxyCompactList}\small\item\em 업로드가 너무 자주일어나 과금에 영향을 주므로,~\newline
+마지막 업로드의 checksum 과 온도정보를 저장하여, aws 에 업로드 주기를 조절하는 구조체 \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{struct_st_last_send}{St\+Last\+Send}} $\ast$ \mbox{\hyperlink{_wall_pad_common_8h_ae1755d3e214b69cfb5e3a3e7c7f28516}{p\+Last\+Send}}
+\end{DoxyCompactItemize}
+\subsection*{열거형 타입}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_wall_pad_common_8h_a01baed20aab6218b9846cc7c935f8de9}{typedef\+M\+O\+DE}} \{ \newline
+\mbox{\hyperlink{_wall_pad_common_8h_a01baed20aab6218b9846cc7c935f8de9abb51c808160be71ef81bc5880610bedc}{e\+M\+O\+D\+E\+\_\+\+N\+O\+NE}} = 0, 
+\mbox{\hyperlink{_wall_pad_common_8h_a01baed20aab6218b9846cc7c935f8de9afbc0f8c6a5b25b698265ad7b74b9d9b7}{e\+M\+O\+D\+E\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+AP}}, 
+\mbox{\hyperlink{_wall_pad_common_8h_a01baed20aab6218b9846cc7c935f8de9a1f5cc10773bdfbec3b85c915572c4d8d}{e\+M\+O\+D\+E\+\_\+\+AP}}, 
+\mbox{\hyperlink{_wall_pad_common_8h_a01baed20aab6218b9846cc7c935f8de9ae9734b024c572803a9131d2df41dece2}{e\+M\+O\+D\+E\+\_\+\+C\+O\+N\+N\+E\+CT}}, 
+\newline
+\mbox{\hyperlink{_wall_pad_common_8h_a01baed20aab6218b9846cc7c935f8de9a25a620c7255a0d3a02bf847826791ce2}{e\+M\+O\+D\+E\+\_\+\+N\+O\+R\+M\+AL}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{매크로 문서화}
+\mbox{\Hypertarget{_wall_pad_common_8h_a633363122e0b4c2005649a1664a2335a}\label{_wall_pad_common_8h_a633363122e0b4c2005649a1664a2335a}} 
+\index{Wall\+Pad\+Common.\+h@{Wall\+Pad\+Common.\+h}!n\+M\+A\+X\+\_\+\+I\+N\+I\+T\+\_\+\+C\+HK@{n\+M\+A\+X\+\_\+\+I\+N\+I\+T\+\_\+\+C\+HK}}
+\index{n\+M\+A\+X\+\_\+\+I\+N\+I\+T\+\_\+\+C\+HK@{n\+M\+A\+X\+\_\+\+I\+N\+I\+T\+\_\+\+C\+HK}!Wall\+Pad\+Common.\+h@{Wall\+Pad\+Common.\+h}}
+\subsubsection{\texorpdfstring{n\+M\+A\+X\+\_\+\+I\+N\+I\+T\+\_\+\+C\+HK}{nMAX\_INIT\_CHK}}
+{\footnotesize\ttfamily \#define n\+M\+A\+X\+\_\+\+I\+N\+I\+T\+\_\+\+C\+HK~40}
+
+
+
+Wall\+Pad\+Common.\+h 파일의 3 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{_wall_pad_common_8h_aa1bfef2ce53d431c709ee094aa02ccb6}\label{_wall_pad_common_8h_aa1bfef2ce53d431c709ee094aa02ccb6}} 
+\index{Wall\+Pad\+Common.\+h@{Wall\+Pad\+Common.\+h}!n\+M\+A\+X\+\_\+\+N\+A\+ME@{n\+M\+A\+X\+\_\+\+N\+A\+ME}}
+\index{n\+M\+A\+X\+\_\+\+N\+A\+ME@{n\+M\+A\+X\+\_\+\+N\+A\+ME}!Wall\+Pad\+Common.\+h@{Wall\+Pad\+Common.\+h}}
+\subsubsection{\texorpdfstring{n\+M\+A\+X\+\_\+\+N\+A\+ME}{nMAX\_NAME}}
+{\footnotesize\ttfamily \#define n\+M\+A\+X\+\_\+\+N\+A\+ME~40}
+
+
+
+Wall\+Pad\+Common.\+h 파일의 2 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{_wall_pad_common_8h_ac370fa01d5773341bbcc501c01c11d1e}\label{_wall_pad_common_8h_ac370fa01d5773341bbcc501c01c11d1e}} 
+\index{Wall\+Pad\+Common.\+h@{Wall\+Pad\+Common.\+h}!n\+M\+A\+X\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+AP@{n\+M\+A\+X\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+AP}}
+\index{n\+M\+A\+X\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+AP@{n\+M\+A\+X\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+AP}!Wall\+Pad\+Common.\+h@{Wall\+Pad\+Common.\+h}}
+\subsubsection{\texorpdfstring{n\+M\+A\+X\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+AP}{nMAX\_SEARCH\_AP}}
+{\footnotesize\ttfamily \#define n\+M\+A\+X\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+AP~30}
+
+
+
+Wall\+Pad\+Common.\+h 파일의 31 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{타입정의 문서화}
+\mbox{\Hypertarget{_wall_pad_common_8h_aa98442922a779292a101450d76255385}\label{_wall_pad_common_8h_aa98442922a779292a101450d76255385}} 
+\index{Wall\+Pad\+Common.\+h@{Wall\+Pad\+Common.\+h}!Ap\+List@{Ap\+List}}
+\index{Ap\+List@{Ap\+List}!Wall\+Pad\+Common.\+h@{Wall\+Pad\+Common.\+h}}
+\subsubsection{\texorpdfstring{Ap\+List}{ApList}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_st_ap_list}{St\+Ap\+List}}  \mbox{\hyperlink{_wall_pad_common_8h_aa98442922a779292a101450d76255385}{Ap\+List}}}
+
+
+
+주변 검색된 A\+P리스트의 정보를 담는 구조체 (암호화 여부와 수신세기를 포함) 
+
+\mbox{\Hypertarget{_wall_pad_common_8h_a066235770a533eb740dc3fd2494d64da}\label{_wall_pad_common_8h_a066235770a533eb740dc3fd2494d64da}} 
+\index{Wall\+Pad\+Common.\+h@{Wall\+Pad\+Common.\+h}!e\+M\+O\+DE@{e\+M\+O\+DE}}
+\index{e\+M\+O\+DE@{e\+M\+O\+DE}!Wall\+Pad\+Common.\+h@{Wall\+Pad\+Common.\+h}}
+\subsubsection{\texorpdfstring{e\+M\+O\+DE}{eMODE}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{_wall_pad_common_8h_a01baed20aab6218b9846cc7c935f8de9}{typedef\+M\+O\+DE}}  \mbox{\hyperlink{_wall_pad_common_8h_a066235770a533eb740dc3fd2494d64da}{e\+M\+O\+DE}}}
+
+\mbox{\Hypertarget{_wall_pad_common_8h_a78ff28de5f4a28ca30a16c6e0f7b0d35}\label{_wall_pad_common_8h_a78ff28de5f4a28ca30a16c6e0f7b0d35}} 
+\index{Wall\+Pad\+Common.\+h@{Wall\+Pad\+Common.\+h}!Last\+Send@{Last\+Send}}
+\index{Last\+Send@{Last\+Send}!Wall\+Pad\+Common.\+h@{Wall\+Pad\+Common.\+h}}
+\subsubsection{\texorpdfstring{Last\+Send}{LastSend}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_st_last_send}{St\+Last\+Send}} \mbox{\hyperlink{_wall_pad_common_8h_a78ff28de5f4a28ca30a16c6e0f7b0d35}{Last\+Send}}}
+
+
+
+업로드가 너무 자주일어나 과금에 영향을 주므로,~\newline
+마지막 업로드의 checksum 과 온도정보를 저장하여, aws 에 업로드 주기를 조절하는 구조체 
+
+\mbox{\Hypertarget{_wall_pad_common_8h_ad2d28182118d0dc42728639623d2dc40}\label{_wall_pad_common_8h_ad2d28182118d0dc42728639623d2dc40}} 
+\index{Wall\+Pad\+Common.\+h@{Wall\+Pad\+Common.\+h}!p\+Ap\+List@{p\+Ap\+List}}
+\index{p\+Ap\+List@{p\+Ap\+List}!Wall\+Pad\+Common.\+h@{Wall\+Pad\+Common.\+h}}
+\subsubsection{\texorpdfstring{p\+Ap\+List}{pApList}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_st_ap_list}{St\+Ap\+List}} $\ast$ \mbox{\hyperlink{_wall_pad_common_8h_ad2d28182118d0dc42728639623d2dc40}{p\+Ap\+List}}}
+
+\mbox{\Hypertarget{_wall_pad_common_8h_ae1755d3e214b69cfb5e3a3e7c7f28516}\label{_wall_pad_common_8h_ae1755d3e214b69cfb5e3a3e7c7f28516}} 
+\index{Wall\+Pad\+Common.\+h@{Wall\+Pad\+Common.\+h}!p\+Last\+Send@{p\+Last\+Send}}
+\index{p\+Last\+Send@{p\+Last\+Send}!Wall\+Pad\+Common.\+h@{Wall\+Pad\+Common.\+h}}
+\subsubsection{\texorpdfstring{p\+Last\+Send}{pLastSend}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_st_last_send}{St\+Last\+Send}} $\ast$ \mbox{\hyperlink{_wall_pad_common_8h_ae1755d3e214b69cfb5e3a3e7c7f28516}{p\+Last\+Send}}}
+
+\mbox{\Hypertarget{_wall_pad_common_8h_aadb492147a743663071ec68a774dbb1b}\label{_wall_pad_common_8h_aadb492147a743663071ec68a774dbb1b}} 
+\index{Wall\+Pad\+Common.\+h@{Wall\+Pad\+Common.\+h}!p\+Wall\+Pad@{p\+Wall\+Pad}}
+\index{p\+Wall\+Pad@{p\+Wall\+Pad}!Wall\+Pad\+Common.\+h@{Wall\+Pad\+Common.\+h}}
+\subsubsection{\texorpdfstring{p\+Wall\+Pad}{pWallPad}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_st_wall_pad}{St\+Wall\+Pad}} $\ast$ \mbox{\hyperlink{_wall_pad_common_8h_aadb492147a743663071ec68a774dbb1b}{p\+Wall\+Pad}}}
+
+\mbox{\Hypertarget{_wall_pad_common_8h_afc78910c4749fa1230e1149115f9d70a}\label{_wall_pad_common_8h_afc78910c4749fa1230e1149115f9d70a}} 
+\index{Wall\+Pad\+Common.\+h@{Wall\+Pad\+Common.\+h}!Wall\+Pad@{Wall\+Pad}}
+\index{Wall\+Pad@{Wall\+Pad}!Wall\+Pad\+Common.\+h@{Wall\+Pad\+Common.\+h}}
+\subsubsection{\texorpdfstring{Wall\+Pad}{WallPad}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_st_wall_pad}{St\+Wall\+Pad}}  \mbox{\hyperlink{_wall_pad_common_8h_afc78910c4749fa1230e1149115f9d70a}{Wall\+Pad}}}
+
+
+
+Wall\+Pad의 접속 ssid 와 pw, mode state를 기록하는 구조체 
+
+
+
+\subsection{열거형 타입 문서화}
+\mbox{\Hypertarget{_wall_pad_common_8h_a01baed20aab6218b9846cc7c935f8de9}\label{_wall_pad_common_8h_a01baed20aab6218b9846cc7c935f8de9}} 
+\index{Wall\+Pad\+Common.\+h@{Wall\+Pad\+Common.\+h}!typedef\+M\+O\+DE@{typedef\+M\+O\+DE}}
+\index{typedef\+M\+O\+DE@{typedef\+M\+O\+DE}!Wall\+Pad\+Common.\+h@{Wall\+Pad\+Common.\+h}}
+\subsubsection{\texorpdfstring{typedef\+M\+O\+DE}{typedefMODE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_wall_pad_common_8h_a01baed20aab6218b9846cc7c935f8de9}{typedef\+M\+O\+DE}}}
+
+\begin{DoxyEnumFields}{열거형 멤버}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+M\+O\+D\+E\+\_\+\+N\+O\+NE@{e\+M\+O\+D\+E\+\_\+\+N\+O\+NE}!Wall\+Pad\+Common.\+h@{Wall\+Pad\+Common.\+h}}\index{Wall\+Pad\+Common.\+h@{Wall\+Pad\+Common.\+h}!e\+M\+O\+D\+E\+\_\+\+N\+O\+NE@{e\+M\+O\+D\+E\+\_\+\+N\+O\+NE}}}\mbox{\Hypertarget{_wall_pad_common_8h_a01baed20aab6218b9846cc7c935f8de9abb51c808160be71ef81bc5880610bedc}\label{_wall_pad_common_8h_a01baed20aab6218b9846cc7c935f8de9abb51c808160be71ef81bc5880610bedc}} 
+e\+M\+O\+D\+E\+\_\+\+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+M\+O\+D\+E\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+AP@{e\+M\+O\+D\+E\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+AP}!Wall\+Pad\+Common.\+h@{Wall\+Pad\+Common.\+h}}\index{Wall\+Pad\+Common.\+h@{Wall\+Pad\+Common.\+h}!e\+M\+O\+D\+E\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+AP@{e\+M\+O\+D\+E\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+AP}}}\mbox{\Hypertarget{_wall_pad_common_8h_a01baed20aab6218b9846cc7c935f8de9afbc0f8c6a5b25b698265ad7b74b9d9b7}\label{_wall_pad_common_8h_a01baed20aab6218b9846cc7c935f8de9afbc0f8c6a5b25b698265ad7b74b9d9b7}} 
+e\+M\+O\+D\+E\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+AP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+M\+O\+D\+E\+\_\+\+AP@{e\+M\+O\+D\+E\+\_\+\+AP}!Wall\+Pad\+Common.\+h@{Wall\+Pad\+Common.\+h}}\index{Wall\+Pad\+Common.\+h@{Wall\+Pad\+Common.\+h}!e\+M\+O\+D\+E\+\_\+\+AP@{e\+M\+O\+D\+E\+\_\+\+AP}}}\mbox{\Hypertarget{_wall_pad_common_8h_a01baed20aab6218b9846cc7c935f8de9a1f5cc10773bdfbec3b85c915572c4d8d}\label{_wall_pad_common_8h_a01baed20aab6218b9846cc7c935f8de9a1f5cc10773bdfbec3b85c915572c4d8d}} 
+e\+M\+O\+D\+E\+\_\+\+AP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+M\+O\+D\+E\+\_\+\+C\+O\+N\+N\+E\+CT@{e\+M\+O\+D\+E\+\_\+\+C\+O\+N\+N\+E\+CT}!Wall\+Pad\+Common.\+h@{Wall\+Pad\+Common.\+h}}\index{Wall\+Pad\+Common.\+h@{Wall\+Pad\+Common.\+h}!e\+M\+O\+D\+E\+\_\+\+C\+O\+N\+N\+E\+CT@{e\+M\+O\+D\+E\+\_\+\+C\+O\+N\+N\+E\+CT}}}\mbox{\Hypertarget{_wall_pad_common_8h_a01baed20aab6218b9846cc7c935f8de9ae9734b024c572803a9131d2df41dece2}\label{_wall_pad_common_8h_a01baed20aab6218b9846cc7c935f8de9ae9734b024c572803a9131d2df41dece2}} 
+e\+M\+O\+D\+E\+\_\+\+C\+O\+N\+N\+E\+CT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+M\+O\+D\+E\+\_\+\+N\+O\+R\+M\+AL@{e\+M\+O\+D\+E\+\_\+\+N\+O\+R\+M\+AL}!Wall\+Pad\+Common.\+h@{Wall\+Pad\+Common.\+h}}\index{Wall\+Pad\+Common.\+h@{Wall\+Pad\+Common.\+h}!e\+M\+O\+D\+E\+\_\+\+N\+O\+R\+M\+AL@{e\+M\+O\+D\+E\+\_\+\+N\+O\+R\+M\+AL}}}\mbox{\Hypertarget{_wall_pad_common_8h_a01baed20aab6218b9846cc7c935f8de9a25a620c7255a0d3a02bf847826791ce2}\label{_wall_pad_common_8h_a01baed20aab6218b9846cc7c935f8de9a25a620c7255a0d3a02bf847826791ce2}} 
+e\+M\+O\+D\+E\+\_\+\+N\+O\+R\+M\+AL&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Wall\+Pad\+Common.\+h 파일의 7 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+8 \{
+9   \mbox{\hyperlink{_wall_pad_common_8h_a01baed20aab6218b9846cc7c935f8de9abb51c808160be71ef81bc5880610bedc}{eMODE\_NONE}}  = 0,  
+10   \mbox{\hyperlink{_wall_pad_common_8h_a01baed20aab6218b9846cc7c935f8de9afbc0f8c6a5b25b698265ad7b74b9d9b7}{eMODE\_SEARCH\_AP}},  
+11   \mbox{\hyperlink{_wall_pad_common_8h_a01baed20aab6218b9846cc7c935f8de9a1f5cc10773bdfbec3b85c915572c4d8d}{eMODE\_AP}},     \textcolor{comment}{// AP MODE}
+12   \mbox{\hyperlink{_wall_pad_common_8h_a01baed20aab6218b9846cc7c935f8de9ae9734b024c572803a9131d2df41dece2}{eMODE\_CONNECT}},    \textcolor{comment}{// Normal }
+13   \mbox{\hyperlink{_wall_pad_common_8h_a01baed20aab6218b9846cc7c935f8de9a25a620c7255a0d3a02bf847826791ce2}{eMODE\_NORMAL}}    \textcolor{comment}{// Normal }
+14 \} \mbox{\hyperlink{_wall_pad_common_8h_a066235770a533eb740dc3fd2494d64da}{eMODE}};
+\end{DoxyCode}
